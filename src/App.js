@@ -18,7 +18,7 @@ export default function App() {
       <div style={{ backgroundColor: "white", margin: 40, marginTop: 60, marginLeft: 80, marginRight: 80, borderRadius: 15, padding: 40 }}>
         <Navbar toggle={toggle} setToggle={setToggle} />
         {toggle === 0 && <ProduitListe setToggle={setToggle} />}
-        {toggle === 1 && <ProduitAjout />}
+        {toggle === 1 && <ProduitAjout setToggle={setToggle} />}
         {toggle === 2 && <ProduitModif setToggle={setToggle} />}
       </div>
     </div>

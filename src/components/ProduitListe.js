@@ -17,19 +17,6 @@ export default function ProduitListe({ setToggle }) {
         setAllProduits(allProduits.filter((el) => el._id !== id));
     }
 
-
-    // const saveLocalProduits = () => {
-    //     localStorage.setItem("produits", JSON.stringify(produits));
-    // };
-    // const getLocalProduits = () => {
-    //     if (localStorage.getItem("produits") === null) {
-    //         localStorage.setItem("produits", JSON.stringify([]));
-    //     } else {
-    //         let localProduits = JSON.parse(localStorage.getItem("produits"));
-    //         setProduits(localProduits);
-    //     }
-    // };
-
     const modifierProduit = (id) => {
         Ls.set("idProduit", id);
         setToggle(2)

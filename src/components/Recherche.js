@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 export default function Recherche({ setProduits, allProduits, setIsSearching }) {
 
@@ -8,7 +8,7 @@ export default function Recherche({ setProduits, allProduits, setIsSearching }) 
 
     var temp = e.target.value;
 
-    if (temp == "") {
+    if (temp === "") {
       setIsSearching(false)
     } else {
       setIsSearching(true)
@@ -20,7 +20,7 @@ export default function Recherche({ setProduits, allProduits, setIsSearching }) 
       if (allProduits.hasOwnProperty(key)) {
         const element = allProduits[key];
 
-        if (element.nom.includes(temp) || element.prix.includes(temp) || element.quantite.includes(temp)) {
+        if (element.nom.includes(temp) || element.prix.toString().includes(temp) || element.quantite.toString().includes(temp)) {
           produits.push(element)
         }
       }

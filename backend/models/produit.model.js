@@ -10,10 +10,10 @@ const produitSchema = new Schema(
       trim: true,
     },
     prix: {
-      type: String,
+      type: Number,
     },
     quantite: {
-      type: String,
+      type: Number,
     },
   },
   { timestamps: true }
